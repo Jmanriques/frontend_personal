@@ -1,4 +1,6 @@
+import { logDOM } from "@testing-library/react";
 import { Link } from "react-router-dom";
+import LogButton from "./LogButton";
 
 function Navbar(props) {
     return (
@@ -108,12 +110,8 @@ function Navbar(props) {
                                 placeholder="Search"
                                 aria-label="Search"
                             />
-                            <button
-                                class="btn btn-outline-success"
-                                type="submit"
-                            >
-                                Search
-                            </button>
+
+                            <LogButton logged={props.logged} />
                         </form>
                     </div>
                 </div>
